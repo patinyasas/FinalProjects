@@ -11,4 +11,7 @@ public class InventoryItem : ScriptableObject
     public int intelligenceModifier;
     public int vitalityModifier;
     public int agilityModifier;
+
+    // Rarity of the item (e.g., 1 = Common, 2 = Rare, 3 = Epic, 4 = Legendary)
+    public int rarity; 
 }

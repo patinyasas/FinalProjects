@@ -24,10 +24,22 @@ namespace UI_Scripts
 
         private StatusUIManager statusUIManager;
 
+        // New reference for glow effect
+        private Outline borderOutline; // Reference to the Outline component
+
         void Start()
         {
             playerStats = FindObjectOfType<PlayerStats>();
             statusUIManager = FindObjectOfType<StatusUIManager>(); // Find the StatusUIManager instance
+
+            // Get the Outline component attached to the borderImage
+            borderOutline = borderImage.GetComponent<Outline>();
+            if (borderOutline == null)
+            {
+                // If no Outline component is found, add one dynamically
+                borderOutline = borderImage.gameObject.AddComponent<Outline>();
+            }
+            borderOutline.enabled = false; // Disable glow effect by default
         }
 
         public void SetItem(InventoryItem newItem)
@@ -144,6 +156,7 @@ namespace UI_Scripts
             playerStats.agility += item.agilityModifier;
 
             borderImage.color = Color.green; // Highlight equipped item
+            borderOutline.enabled = true; // Enable the glow effect for the equipped item
             isEquipped = true;
 
             // Update the currently equipped item slot
@@ -161,6 +174,7 @@ namespace UI_Scripts
             playerStats.agility -= item.agilityModifier;
 
             borderImage.color = Color.white; // Remove highlight
+            borderOutline.enabled = false; // Disable the glow effect
             isEquipped = false;
 
             Debug.Log("Item unequipped: " + item.itemName);

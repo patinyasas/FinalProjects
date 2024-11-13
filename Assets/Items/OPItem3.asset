@@ -18,3 +18,4 @@ MonoBehaviour:
   intelligenceModifier: 120
   vitalityModifier: 300
   agilityModifier: 40
+  rarity: 4
