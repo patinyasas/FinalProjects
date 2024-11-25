@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Wooden Axe
   icon: {fileID: -1975253083, guid: db14a655a5eccb54b8f946f3cd908b56, type: 3}
-  strengthModifier: 4
+  strengthModifier: 55
   intelligenceModifier: 0
   vitalityModifier: 3
-  agilityModifier: 0
+  agilityModifier: 4
+  rarity: 0

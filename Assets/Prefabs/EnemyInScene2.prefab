@@ -196,11 +196,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aff8b8baa4343b4e8ebea81587c1520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1000
+  maxHP: 3000
   currentHP: 0
   expReward: 2500
-  dropItems:
-  - {fileID: 3327449288989912803, guid: 46bb8a7fc7e926f49a04bcd56a6a2912, type: 3}
+  dropItems: []
   dropChance: 100
 --- !u!1 &3885081552607485022
 GameObject:
